@@ -1,0 +1,21 @@
+Install a package called rpcbind and to install in linux following is the command 
+
+
+"sudo apt-get install rpcbind" 
+
+And after the installation or if you want to check if rpcbind is installed type rpcinfo, the command should display a table, if it doesnt then rpcbind should be installed or updated 
+
+then do the folllowing
+
+rpcgen os.x
+cc server.c os_svc.c -o server -lnsl
+cc client.c os_clnt.c -o client -lnsl
+
+./server
+./client <hostname> "enter the alphanumeric string with secret word C00l"
+
+for example:
+
+./client localhost heydudeC00L143
+
+
